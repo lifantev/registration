@@ -4,6 +4,22 @@ server:
     include-binding-errors: always
 
 spring:
+  mail:
+    host: localhost
+    port: 1025
+    username: admin
+    password: admin
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
   datasource:
     url: jdbc:postgresql://localhost:5432/registration
     username: postgres
